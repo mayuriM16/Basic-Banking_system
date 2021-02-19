@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,10 +76,11 @@ button{
   <form action="temp1.php" method="get">
      <br>
     <b><font size=+3>Transfer From : </b>
-    <?php
-          $sender=$_GET['id'];
-          echo "$sender";
-    ?>
+      <?php
+      $send=$_GET['id'];
+      echo "$send";
+      $_SESSION["SENTER"]=$send;
+      ?>
     <br><br>
     <b>Transfer To : </b>
       <select name="receiver" id="dropdown"; required>
@@ -93,6 +97,7 @@ button{
     <br><br>
     <b>Amount : </b>
     <input name="amount" value="" type="number" min="1" required>
+    <input type="hidden" name="SENDER"  option value=$_GET[ID]>
     <br><br>
     <button class="button" type="submit">Transaction</button>
     <br><br>

@@ -112,13 +112,7 @@ $conn->close();
             <?php 
                 } 
              ?> 
-        </table>
-         <center>
-         	<br><br>
-         	<p>
-         		<a href="temp.php"><button style=" margin-left: 400px; width:200px; height:40px;" class="button" type="submit">AddCustomer</button></a>
-         	</p>
-         </center>
+        </table
      </section>
 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVk5hIzYj6rpxz_mAb9OPvP6TltRnoCZFy4g&usqp=CAU'>
 </body>

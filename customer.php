@@ -112,7 +112,7 @@ $conn->close();
             <?php 
                 } 
              ?> 
-        </table
+        </table>
      </section>
 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVk5hIzYj6rpxz_mAb9OPvP6TltRnoCZFy4g&usqp=CAU'>
 </body>

@@ -1,7 +1,5 @@
 <?php
-// Create connection
 $conn = new mysqli('localhost','root','','customer');
-// Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
@@ -76,6 +74,7 @@ $conn->close();
             text-align: center;
             font-style: 'verdana';  
         } 
+        
         th{
             background-color: blue;
         }
@@ -89,8 +88,7 @@ $conn->close();
   </div>
     <section> 
     	<h2 style="color: yellow;">The Spark bank</h2>
-    	<h1><font size=+3 style="margin-left: 660px;">CUSTOMERS DETAILS</font></h1> 
-        <!-- TABLE CONSTRUCTION--> 
+    	<h1><font size=+3 style="margin-left: 660px;">CUSTOMERS DETAILS</font></h1>  
         <table> 
             <tr> 
                 <th>ACC_NO</th> 
@@ -99,7 +97,7 @@ $conn->close();
                 <th>BALANCE</th>
                 <th>PROCESS</th>
             </tr> 
-            <?php   // LOOP TILL END OF DATA  
+            <?php    
                 while($rows=$result->fetch_assoc()) 
                 { 
              ?> 
@@ -108,7 +106,7 @@ $conn->close();
                 <td><?php echo $rows['name'];?></td> 
                 <td><?php echo $rows['Email'];?></td> 
                 <td><?php echo $rows['Balance'];?></td>
-                <td><a href="transaction.php?id= <?php echo $rows['name'];?> "><button class="button" type="submit">Transfer</button></a></td>       </tr> 
+                <td><a href="transaction.php?id= <?php echo $rows['name'];?> "><button class="button" type="submit">Transfer</button></a></td>       </tr>
             <?php 
                 } 
              ?> 
